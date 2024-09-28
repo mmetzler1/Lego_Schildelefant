@@ -26,8 +26,8 @@ motor_init(back_right_motor, 100, 100)
 motor_init(front_left_motor, 100, 100)
 motor_init(front_right_motor, 100, 100)
 
-#änderung
-
 # bewegen eines Beins
-#back_left_motor.run_angle(100, 90, Stop.HOLD, False)
-#back_right_motor.run_angle(100, 90, Stop.HOLD, False)
+back_left_motor.run_angle(100, -120, Stop.HOLD, False)
+back_right_motor.run_angle(100, -120, Stop.HOLD, False)
+front_left_motor.run_angle(100, -30, Stop.HOLD, False)
+front_right_motor.run_angle(100, -30, Stop.HOLD, False)
