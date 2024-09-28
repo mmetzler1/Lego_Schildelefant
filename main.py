@@ -21,13 +21,17 @@ def motor_init(motor, speed_percent, duty_limit):
     motor.reset_angle(0)
     motor.hold()
 
+def move_motor(motor, angle_deg, speed_percent):
+    motor.run_target(speed_percent, angle_deg)
+    motor.hold()
+
 motor_init(back_left_motor, 100, 100)
 motor_init(back_right_motor, 100, 100)
 motor_init(front_left_motor, 100, 100)
 motor_init(front_right_motor, 100, 100)
 
 # bewegen eines Beins
-back_left_motor.run_angle(100, -120, Stop.HOLD, False)
-back_right_motor.run_angle(100, -120, Stop.HOLD, False)
-front_left_motor.run_angle(100, -30, Stop.HOLD, False)
-front_right_motor.run_angle(100, -30, Stop.HOLD, False)
+move_motor(back_left_motor,-130,100)
+move_motor(back_right_motor,-130,100)
+move_motor(front_left_motor,-70,100)
+move_motor(front_right_motor,-70,100)
